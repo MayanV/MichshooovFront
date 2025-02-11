@@ -1,25 +1,16 @@
-import React from 'react';
-import { Layout } from './components/layout/Layout';
-import { Dashboard } from './components/dashboard/Dashboard';
-import { ComputersTable } from './components/computers/ComputersTable';
-import { useDarkMode } from './hooks/useDarkMode';
-import { useComputers } from './hooks/useComputers';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ComputerManagement from "./pages/ComputerManagement";
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
 
-const App: React.FC = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
-  const { computers, filteredComputers, searchComputers } = useComputers([]);
-
+export default function App() {
   return (
-    <div dir="rtl" className={isDarkMode ? 'dark' : ''}>
-      <Layout isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode}>
-        <Dashboard />
-        <ComputersTable 
-          computers={filteredComputers}
-          onSearch={searchComputers}
-        />
-      </Layout>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ComputerManagement />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-export default App;
+}
