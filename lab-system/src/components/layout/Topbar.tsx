@@ -56,7 +56,7 @@ export default function TopBar() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Open settings" arrow>
               <IconButton href="/settings" sx={{ p: 0 }}>
                 <SettingsRounded />
               </IconButton>

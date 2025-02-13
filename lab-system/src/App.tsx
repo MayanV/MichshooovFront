@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import Settings from './pages/Settings';
 import TopBar from './components/layout/Topbar';
+import NewComputerModal from './components/common/NewComputerModal';
 
 const darkTheme = createTheme({
   palette: {
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <NewComputerModal />
       </BrowserRouter>
     </ThemeProvider>
   );
