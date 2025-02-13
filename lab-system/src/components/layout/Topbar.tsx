@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import AdbIcon from '@mui/icons-material/Adb';
 import { SettingsRounded } from '@mui/icons-material';
+import { ButtonGroup } from '@mui/material';
 
 const pages = ['home', 'dashboard'];
 
@@ -16,9 +16,11 @@ export default function TopBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Typography variant="h3" noWrap component="a">
+            🐶
+          </Typography>
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="a"
             sx={{
@@ -26,19 +28,29 @@ export default function TopBar() {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.2rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            QUIRKY LOGO
+            LABRADAR
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 href={page}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: 'white',
+                  display: 'block',
+                  letterSpacing: '.1rem',
+                }}
               >
                 {page}
               </Button>
