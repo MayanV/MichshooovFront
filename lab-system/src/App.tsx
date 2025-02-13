@@ -4,7 +4,7 @@ import Dashboard from './pages/Dashboard';
 import PageNotFound from './pages/PageNotFound';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import Settings from './pages/Settings';
-import TopBar from './components/layout/TopBar';
+import TopBar from './components/layout/Topbar';
 
 const darkTheme = createTheme({
   palette: {
