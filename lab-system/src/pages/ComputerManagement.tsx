@@ -1,3 +1,7 @@
-export default function ComputerManagement(){
-    return(<p>Computer management page</p>)
+export default function ComputerManagement() {
+  return (
+    <>
+      <p>Computer management page</p>
+    </>
+  );
 }
