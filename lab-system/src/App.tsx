@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ComputerManagement from './pages/ComputerManagement';
 import Dashboard from './pages/Dashboard';
-import PageNotFound from './pages/PageNotFound';
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import Settings from './pages/Settings';
 import TopBar from './components/layout/Topbar';
@@ -20,10 +19,10 @@ export default function App() {
         <TopBar />
         <Routes>
           <Route path="/" element={<ComputerManagement />} />
-          <Route path="home" element={<ComputerManagement />} />
+          <Route path="home" element={<Navigate to="/" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="settings" element={<Settings />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
