@@ -12,13 +12,6 @@ import { SettingsRounded } from '@mui/icons-material';
 const pages = ['home', 'dashboard'];
 
 export default function TopBar() {
-  const routePages = (page: string) => {
-    if (page === 'Home') {
-      page = '';
-    }
-    return page.toLowerCase;
-  };
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
