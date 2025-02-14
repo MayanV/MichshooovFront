@@ -5,15 +5,16 @@ import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import Settings from './pages/Settings';
 import TopBar from './components/layout/Topbar';
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
+const appTheme = createTheme({
+  colorSchemes: {
+    light: true,
+    dark: true,
   },
 });
 
 export default function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={appTheme} defaultMode="system">
       <CssBaseline />
       <BrowserRouter>
         <TopBar />
