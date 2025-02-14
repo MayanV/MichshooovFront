@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function Settings() {
-  return <p>This is the settings page</p>;
+  return <Typography>This is the settings page</Typography>;
 }
