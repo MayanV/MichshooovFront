@@ -6,15 +6,16 @@ import Settings from './pages/Settings';
 import TopBar from './components/layout/Topbar';
 import NewComputerModal from './components/common/NewComputerModal';
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
+const appTheme = createTheme({
+  colorSchemes: {
+    light: true,
+    dark: true,
   },
 });
 
 export default function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={appTheme} defaultMode="system">
       <CssBaseline />
       <BrowserRouter>
         <TopBar />

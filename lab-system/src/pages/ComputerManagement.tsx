@@ -1,7 +1,5 @@
+import { Typography } from '@mui/material';
+
 export default function ComputerManagement() {
-  return (
-    <>
-      <p>Computer management page</p>
-    </>
-  );
+  return <Typography>Computer management page</Typography>;
 }

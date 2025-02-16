@@ -15,15 +15,13 @@ export default function TopBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography variant="h3" noWrap component="a">
-            🐶
-          </Typography>
+          <Typography variant="h3">🐶</Typography>
           <Typography
             variant="h4"
             noWrap
             component="a"
             sx={{
-              mr: 2,
+              mr: '3rem',
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
@@ -44,11 +42,15 @@ export default function TopBar() {
               <Button
                 key={page}
                 href={page}
+                size="large"
                 sx={{
-                  my: 2,
+                  textTransform: 'capitalize',
+                  px: '1rem',
+                  my: '0.5rem',
+                  mx: '.2rem',
                   color: 'white',
                   display: 'block',
-                  letterSpacing: '.1rem',
+                  fontSize: 'large',
                 }}
               >
                 {page}
@@ -56,8 +58,8 @@ export default function TopBar() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings" arrow>
-              <IconButton href="/settings" sx={{ p: 0 }}>
+            <Tooltip title="Open settings">
+              <IconButton href="/settings" sx={{ p: '.5rem' }}>
                 <SettingsRounded />
               </IconButton>
             </Tooltip>
