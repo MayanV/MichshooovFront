@@ -9,3 +9,9 @@ export interface Computer {
 }
 
 export type ComputerStatus = 'pending' | 'in_progress' | 'completed' | 'repair';
+
+export enum SettingsPages {
+  'display' = 'DisplayTab',
+  'computers_table' = 'ComputerTableTab',
+  'dashboard' = 'DashboardTab',
+}
