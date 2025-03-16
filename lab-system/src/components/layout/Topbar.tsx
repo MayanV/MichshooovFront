@@ -12,14 +12,14 @@ const pages = ['home', 'dashboard'];
 
 export default function TopBar() {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position='static'>
+      <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <Typography variant="h3">🐶</Typography>
+          <Typography variant='h3'>🐶</Typography>
           <Typography
-            variant="h4"
+            variant='h4'
             noWrap
-            component="a"
+            component='a'
             sx={{
               mr: '3rem',
               display: { xs: 'none', md: 'flex' },
@@ -42,7 +42,7 @@ export default function TopBar() {
               <Button
                 key={page}
                 href={page}
-                size="large"
+                size='large'
                 sx={{
                   textTransform: 'capitalize',
                   px: '1rem',
@@ -58,8 +58,8 @@ export default function TopBar() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton href="/settings" sx={{ p: '.5rem' }}>
+            <Tooltip title='Open settings'>
+              <IconButton href='/settings.display' sx={{ p: '.5rem' }}>
                 <SettingsRounded />
               </IconButton>
             </Tooltip>
